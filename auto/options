@@ -62,6 +62,7 @@ HTTP_V2=NO
 HTTP_SSI=YES
 HTTP_REALIP=NO
 HTTP_XSLT=NO
+HTTP_XSD=NO
 HTTP_IMAGE_FILTER=NO
 HTTP_SUB=NO
 HTTP_ADDITION=NO
@@ -231,7 +232,9 @@ $0: warning: the \"--with-ipv6\" option is deprecated"
         --with-http_realip_module)       HTTP_REALIP=YES            ;;
         --with-http_addition_module)     HTTP_ADDITION=YES          ;;
         --with-http_xslt_module)         HTTP_XSLT=YES              ;;
+        --with-http_xsd_module)          HTTP_XSD=YES               ;;
         --with-http_xslt_module=dynamic) HTTP_XSLT=DYNAMIC          ;;
+        --with-http_xsd_module=dynamic)  HTTP_XSD=DYNAMIC           ;;
         --with-http_image_filter_module) HTTP_IMAGE_FILTER=YES      ;;
         --with-http_image_filter_module=dynamic)
                                          HTTP_IMAGE_FILTER=DYNAMIC  ;;
@@ -449,6 +452,8 @@ cat << END
   --with-http_addition_module        enable ngx_http_addition_module
   --with-http_xslt_module            enable ngx_http_xslt_module
   --with-http_xslt_module=dynamic    enable dynamic ngx_http_xslt_module
+  --with-http_xsd_module             enable ngx_http_xsd_module
+  --with-http_xsd_module=dynamic     enable dynamic ngx_http_xsd_module
   --with-http_image_filter_module    enable ngx_http_image_filter_module
   --with-http_image_filter_module=dynamic
                                      enable dynamic ngx_http_image_filter_module
